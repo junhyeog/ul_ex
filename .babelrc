@@ -1,0 +1,47 @@
+{
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "babel-plugin-styled-components",
+      "@babel/plugin-transform-runtime",
+      ["module-resolver", {
+        "root": ["./src"],
+        "alias": {
+          "test": "./test",
+          "underscore": "lodash"
+        }
+      }],
+      ["file-loader",{
+          "name": "[hash].[ext]",
+          "extensions": ["png", "jpg", "jpeg", "gif", "svg"],
+          "publicPath": "public/img", // build: public/img (server에서 /url/public 위치에 file 저장 가정), dev: /img
+          "outputPath": "/build/img", // build: /build/img, dev: /dist/img
+          "context": "",
+          "limit": 0
+        }
+      ],
+      ["@babel/plugin-proposal-decorators", {"legacy": true}],
+      ["@babel/plugin-proposal-class-properties", {"loose": true}]
+    ]
+  }
+
+  /* 
+   "@babel/plugin-transform-runtime",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "test": "./test",
+        "underscore": "lodash"
+      }
+    }],
+    ["file-loader",{
+        "name": "[hash].[ext]",
+        "extensions": ["png", "jpg", "jpeg", "gif", "svg"],
+        "publicPath": "public/img", // build: public/img (server에서 /url/public 위치에 file 저장 가정), dev: /img
+        "outputPath": "/build/img", // build: /build/img, dev: /dist/img
+        "context": "",
+        "limit": 0
+      }
+    ]
+  */
