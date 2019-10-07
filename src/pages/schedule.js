@@ -9,6 +9,7 @@ const Schedule = () => {
             <Slogan>투데이</Slogan>
         </HeaderBox>
         <NavBar/>
+        
     </>)
 }
 export default Schedule;
