@@ -2,18 +2,9 @@ import Axios from 'axios';
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 import styled  from 'styled-components';
-import {BACK_URL} from '../config';
 
 const Index = () => {
   useEffect(()=> {
-    Axios.get(`${BACK_URL}/auth/verify`, {withCredentials: true})
-      .then((res) => {
-        if (res.data.loggedIn === true) {
-          console.log(res.data);
-          window.sessionStorage.setItem("id", res.data.user._id);
-          window.location.replace('/today');
-        }
-      });
   });
 
 
