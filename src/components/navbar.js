@@ -102,6 +102,7 @@ const NavBarBox = styled.div`
   position: absolute;
   bottom: 0px;
   height: 54.5px;
+  //width: 100vw;
   width: 375px;
   left: 50%;
   transform: translate(-50%);
